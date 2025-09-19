@@ -133,4 +133,105 @@
 
   window.addEventListener("load", initSwiper);
 
+  // Modern Contact Form Enhancement
+  function initModernContactForm() {
+    const form = document.querySelector('.modern-contact-form');
+    if (!form) return;
+
+    const submitBtn = form.querySelector('.modern-submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+
+    // Add floating label animation
+    const floatingLabels = form.querySelectorAll('.form-floating');
+    floatingLabels.forEach(floating => {
+      const input = floating.querySelector('.form-control');
+      const label = floating.querySelector('label');
+
+      // Check if input has value on page load
+      if (input.value.trim() !== '') {
+        label.classList.add('active');
+      }
+
+      input.addEventListener('focus', () => {
+        label.classList.add('active');
+      });
+
+      input.addEventListener('blur', () => {
+        if (input.value.trim() === '') {
+          label.classList.remove('active');
+        }
+      });
+
+      input.addEventListener('input', () => {
+        if (input.value.trim() !== '') {
+          label.classList.add('active');
+        } else {
+          label.classList.remove('active');
+        }
+      });
+    });
+
+    // Form submission with loading state
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show loading state
+      btnText.classList.add('d-none');
+      btnLoading.classList.remove('d-none');
+      submitBtn.disabled = true;
+      
+      // Simulate form submission (replace with actual form submission logic)
+      setTimeout(() => {
+        // Reset button state
+        btnText.classList.remove('d-none');
+        btnLoading.classList.add('d-none');
+        submitBtn.disabled = false;
+        
+        // Show success message (you can customize this)
+        showFormMessage('success', 'Thank you! Your message has been sent successfully.');
+        
+        // Reset form
+        form.reset();
+        floatingLabels.forEach(floating => {
+          const label = floating.querySelector('label');
+          label.classList.remove('active');
+        });
+      }, 2000);
+    });
+  }
+
+  // Show form messages
+  function showFormMessage(type, message) {
+    const form = document.querySelector('.modern-contact-form');
+    if (!form) return;
+
+    // Remove existing messages
+    const existingMessage = form.querySelector('.form-message');
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
+    // Create new message
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message alert alert-${type === 'success' ? 'success' : 'danger'} mt-3`;
+    messageDiv.innerHTML = `
+      <i class="bi bi-${type === 'success' ? 'check-circle' : 'exclamation-triangle'} me-2"></i>
+      ${message}
+    `;
+    
+    // Add to form
+    form.appendChild(messageDiv);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+      if (messageDiv.parentNode) {
+        messageDiv.remove();
+      }
+    }, 5000);
+  }
+
+  // Initialize modern contact form when DOM is loaded
+  document.addEventListener('DOMContentLoaded', initModernContactForm);
+
 })();

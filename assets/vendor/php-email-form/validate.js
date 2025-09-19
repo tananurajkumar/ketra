@@ -1,7 +1,7 @@
 /**
-* PHP Email Form Validation - v3.9
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
+* Custom Form Validation - Modified for submit-form.com
+* Based on PHP Email Form Validation - v3.9
+* Author: BootstrapMade.com (Modified)
 */
 (function () {
   "use strict";
@@ -13,43 +13,24 @@
       event.preventDefault();
 
       let thisForm = this;
-
       let action = thisForm.getAttribute('action');
-      let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
       
       if( ! action ) {
         displayError(thisForm, 'The form action property is not set!');
         return;
       }
-      thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
+
+      // Show loading state
+      showLoading(thisForm);
 
       let formData = new FormData( thisForm );
 
-      if ( recaptcha ) {
-        if(typeof grecaptcha !== "undefined" ) {
-          grecaptcha.ready(function() {
-            try {
-              grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
-              .then(token => {
-                formData.set('recaptcha-response', token);
-                php_email_form_submit(thisForm, action, formData);
-              })
-            } catch(error) {
-              displayError(thisForm, error);
-            }
-          });
-        } else {
-          displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
-        }
-      } else {
-        php_email_form_submit(thisForm, action, formData);
-      }
+      // Submit to submit-form.com
+      submitForm(thisForm, action, formData);
     });
   });
 
-  function php_email_form_submit(thisForm, action, formData) {
+  function submitForm(thisForm, action, formData) {
     fetch(action, {
       method: 'POST',
       body: formData,
@@ -57,29 +38,87 @@
     })
     .then(response => {
       if( response.ok ) {
-        return response.text();
+        return response.json();
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+        throw new Error(`${response.status} ${response.statusText}`); 
       }
     })
     .then(data => {
-      thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
-      } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
-      }
+      hideLoading(thisForm);
+      showSuccess(thisForm, 'Your message has been sent successfully!');
+      thisForm.reset(); 
     })
     .catch((error) => {
-      displayError(thisForm, error);
+      hideLoading(thisForm);
+      displayError(thisForm, 'Sorry, there was an error sending your message. Please try again.');
+      console.error('Form submission error:', error);
     });
   }
 
+  function showLoading(thisForm) {
+    const submitBtn = thisForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+    }
+  }
+
+  function hideLoading(thisForm) {
+    const submitBtn = thisForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send';
+    }
+  }
+
+  function showSuccess(thisForm, message) {
+    // Create success message element if it doesn't exist
+    let successElement = thisForm.querySelector('.success-message');
+    if (!successElement) {
+      successElement = document.createElement('div');
+      successElement.className = 'success-message';
+      successElement.style.cssText = 'color: #27a776; margin-top: 10px; padding: 10px; background: rgba(39, 167, 118, 0.1); border-radius: 4px;';
+      thisForm.appendChild(successElement);
+    }
+    
+    successElement.innerHTML = message;
+    successElement.style.display = 'block';
+    
+    // Hide error message if it exists
+    const errorElement = thisForm.querySelector('.error-message');
+    if (errorElement) {
+      errorElement.style.display = 'none';
+    }
+
+    // Auto-hide success message after 5 seconds
+    setTimeout(() => {
+      successElement.style.display = 'none';
+    }, 5000);
+  }
+
   function displayError(thisForm, error) {
-    thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
-    thisForm.querySelector('.error-message').classList.add('d-block');
+    // Create error message element if it doesn't exist
+    let errorElement = thisForm.querySelector('.error-message');
+    if (!errorElement) {
+      errorElement = document.createElement('div');
+      errorElement.className = 'error-message';
+      errorElement.style.cssText = 'color: #dc3545; margin-top: 10px; padding: 10px; background: rgba(220, 53, 69, 0.1); border-radius: 4px;';
+      thisForm.appendChild(errorElement);
+    }
+    
+    errorElement.innerHTML = error;
+    errorElement.style.display = 'block';
+    
+    // Hide success message if it exists
+    const successElement = thisForm.querySelector('.success-message');
+    if (successElement) {
+      successElement.style.display = 'none';
+    }
+
+    // Auto-hide error message after 5 seconds
+    setTimeout(() => {
+      errorElement.style.display = 'none';
+    }, 5000);
   }
 
 })();
