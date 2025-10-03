@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Font Tester - KetraLabs Website Typography</title>
+  <meta name="description" content="Interactive font testing interface for KetraLabs website - preview different fonts in real-time">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Popular Options -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Font Tester Specific Styles */
+    .font-tester-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 350px;
+      height: 100vh;
+      background: #fff;
+      border-left: 2px solid #ddd;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+      z-index: 9999;
+      overflow-y: auto;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .font-tester-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10000;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .font-tester-panel h3 {
+      margin-top: 0;
+      color: #333;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
+
+    .font-group {
+      margin-bottom: 25px;
+    }
+
+    .font-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .font-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .font-preview {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      border: 1px solid #e9ecef;
+    }
+
+    .font-preview-text {
+      margin: 5px 0;
+    }
+
+    .reset-btn {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .export-btn {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .website-content {
+      margin-right: 370px;
+      transition: margin-right 0.3s ease;
+    }
+
+    .website-content.full-width {
+      margin-right: 0;
+    }
+
+    .font-tester-panel.hidden {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .css-output {
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    /* Font size controls */
+    .size-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .size-control input[type="range"] {
+      flex: 1;
+    }
+
+    .size-display {
+      min-width: 40px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="font-tester-page">
+
+  <!-- Font Tester Toggle Button -->
+  <button class="font-tester-toggle" onclick="toggleFontTester()">
+    <i class="bi bi-fonts"></i> Font Tester
+  </button>
+
+  <!-- Font Tester Panel -->
+  <div class="font-tester-panel" id="fontTesterPanel">
+    <h3><i class="bi bi-fonts"></i> Font Tester</h3>
+    
+    <!-- Heading Font -->
+    <div class="font-group">
+      <label for="headingFont">Heading Font (H1, H2, H3)</label>
+      <select id="headingFont" onchange="updateFont('heading')">
+        <option value="Roboto">Roboto (Current)</option>
+        <option value="Inter">Inter</option>
+        <option value="Open Sans">Open Sans</option>
+        <option value="Lato">Lato</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Poppins">Poppins</option>
+        <option value="Source Sans Pro">Source Sans Pro</option>
+        <option value="Nunito">Nunito</option>
+        <option value="Raleway">Raleway</option>
+        <option value="Playfair Display">Playfair Display</option>
+        <option value="Merriweather">Merriweather</option>
+      </select>
+      
+      <div class="size-control">
+        <label>Size:</label>
+        <input type="range" id="headingSize" min="24" max="72" value="32" onchange="updateFontSize('heading')">
+        <span class="size-display" id="headingSizeDisplay">32px</span>
+      </div>
+      
+      <div class="font-preview">
+        <div class="font-preview-text" id="headingPreview" style="font-size: 32px; font-weight: bold;">
+          Project Portfolio
+        </div>
+      </div>
+    </div>
+
+    <!-- Body Font -->
+    <div class="font-group">
+      <label for="bodyFont">Body Font (Paragraphs, Text)</label>
+      <select id="bodyFont" onchange="updateFont('body')">
+        <option value="Roboto">Roboto (Current)</option>
+        <option value="Inter">Inter</option>
+        <option value="Open Sans">Open Sans</option>
+        <option value="Lato">Lato</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Poppins">Poppins</option>
+        <option value="Source Sans Pro">Source Sans Pro</option>
+        <option value="Nunito">Nunito</option>
+        <option value="Raleway">Raleway</option>
+        <option value="Cardo">Cardo</option>
+        <option value="Merriweather">Merriweather</option>
+      </select>
+      
+      <div class="size-control">
+        <label>Size:</label>
+        <input type="range" id="bodySize" min="12" max="24" value="16" onchange="updateFontSize('body')">
+        <span class="size-display" id="bodySizeDisplay">16px</span>
+      </div>
+      
+      <div class="font-preview">
+        <div class="font-preview-text" id="bodyPreview" style="font-size: 16px;">
+          Explore my collection of utility applications designed to solve everyday problems. From fast text editing to intuitive calendar management.
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Font -->
+    <div class="font-group">
+      <label for="navFont">Navigation Font</label>
+      <select id="navFont" onchange="updateFont('nav')">
+        <option value="Roboto">Roboto (Current)</option>
+        <option value="Inter">Inter</option>
+        <option value="Open Sans">Open Sans</option>
+        <option value="Lato">Lato</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Poppins">Poppins</option>
+        <option value="Source Sans Pro">Source Sans Pro</option>
+        <option value="Nunito">Nunito</option>
+        <option value="Raleway">Raleway</option>
+      </select>
+      
+      <div class="size-control">
+        <label>Size:</label>
+        <input type="range" id="navSize" min="12" max="20" value="14" onchange="updateFontSize('nav')">
+        <span class="size-display" id="navSizeDisplay">14px</span>
+      </div>
+      
+      <div class="font-preview">
+        <div class="font-preview-text" id="navPreview" style="font-size: 14px; font-weight: 500;">
+          Home • Projects • Contact
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="reset-btn" onclick="resetFonts()">
+      <i class="bi bi-arrow-clockwise"></i> Reset to Default
+    </button>
+    
+    <button class="export-btn" onclick="exportCSS()">
+      <i class="bi bi-download"></i> Export CSS
+    </button>
+
+    <!-- CSS Output -->
+    <div class="css-output" id="cssOutput" style="display: none;">
+      <strong>Copy this CSS:</strong>
+      <pre id="cssCode"></pre>
+    </div>
+  </div>
+
+  <!-- Website Content -->
+  <div class="website-content" id="websiteContent">
+    
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div class="container-fluid position-relative d-flex align-items-center justify-content-center">
+
+        <a href="index.html" class="logo d-flex align-items-center position-absolute start-0 px-2">
+          <i class="bi bi-rocket-takeoff"></i>
+          <h1 class="sitename">KetraLabs</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home<br></a></li>
+            <li><a href="projects.html"><span>Projects<br></a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Project Portfolio</h1>
+                <p class="mb-0">Explore my collection of utility applications designed to solve everyday problems. From fast text editing to intuitive calendar management and interactive quiz creation, each project focuses on simplicity, performance, and user experience across Mac, iOS, and Android platforms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample Projects Section -->
+      <section id="projects" class="gallery section">
+        <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <div class="gallery-item h-100">
+                <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="Fast Text Editor">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                  <a href="assets/img/gallery/gallery-1.jpg" title="Text Editor" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                  <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-info mt-3 text-center">
+                  <h4>Fast Text Editor</h4>
+                  <p class="text-muted">Local & lightning-fast text editing for Mac, iOS, and Android</p>
+                  <div class="project-tags">
+                    <span class="badge bg-primary me-1">Mac</span>
+                    <span class="badge bg-success me-1">iOS</span>
+                    <span class="badge bg-info">Android</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <div class="gallery-item h-100">
+                <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="Calendar App">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                  <a href="assets/img/gallery/gallery-2.jpg" title="Calendar App" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                  <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-info mt-3 text-center">
+                  <h4>Minimalist Calendar</h4>
+                  <p class="text-muted">Clean, intuitive calendar app with powerful scheduling features</p>
+                  <div class="project-tags">
+                    <span class="badge bg-primary me-1">Mac</span>
+                    <span class="badge bg-success me-1">iOS</span>
+                    <span class="badge bg-info">Android</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <div class="gallery-item h-100">
+                <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="Quiz Maker">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                  <a href="assets/img/gallery/gallery-3.jpg" title="Quiz Maker" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                  <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-info mt-3 text-center">
+                  <h4>Quiz Maker Utility</h4>
+                  <p class="text-muted">Transform CSV/XLSX files into interactive self-exam quizzes</p>
+                  <div class="project-tags">
+                    <span class="badge bg-warning me-1">CSV Import</span>
+                    <span class="badge bg-danger me-1">XLSX Support</span>
+                    <span class="badge bg-secondary">Self-Exam</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">KetraLabs</strong> <span>All Rights Reserved</span></p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href="https://x.com/tananurajkumar" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+          <a href="mailto:support@ketralabs.com"><i class="bi bi-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Font Tester JavaScript -->
+  <script>
+    // Current font settings
+    let currentFonts = {
+      heading: { family: 'Roboto', size: 32 },
+      body: { family: 'Roboto', size: 16 },
+      nav: { family: 'Roboto', size: 14 }
+    };
+
+    // Toggle font tester panel
+    function toggleFontTester() {
+      const panel = document.getElementById('fontTesterPanel');
+      const content = document.getElementById('websiteContent');
+      
+      panel.classList.toggle('hidden');
+      content.classList.toggle('full-width');
+    }
+
+    // Update font family
+    function updateFont(type) {
+      const selectElement = document.getElementById(type + 'Font');
+      const fontFamily = selectElement.value;
+      currentFonts[type].family = fontFamily;
+      
+      // Update preview
+      const preview = document.getElementById(type + 'Preview');
+      preview.style.fontFamily = fontFamily;
+      
+      // Apply to website
+      applyFonts();
+    }
+
+    // Update font size
+    function updateFontSize(type) {
+      const sizeElement = document.getElementById(type + 'Size');
+      const displayElement = document.getElementById(type + 'SizeDisplay');
+      const size = sizeElement.value;
+      
+      currentFonts[type].size = size;
+      displayElement.textContent = size + 'px';
+      
+      // Update preview
+      const preview = document.getElementById(type + 'Preview');
+      preview.style.fontSize = size + 'px';
+      
+      // Apply to website
+      applyFonts();
+    }
+
+    // Apply fonts to website
+    function applyFonts() {
+      // Create or update style element
+      let styleElement = document.getElementById('fontTesterStyles');
+      if (!styleElement) {
+        styleElement = document.createElement('style');
+        styleElement.id = 'fontTesterStyles';
+        document.head.appendChild(styleElement);
+      }
+
+      const css = `
+        /* Font Tester Applied Styles */
+        h1, h2, h3, h4, h5, h6, .sitename {
+          font-family: '${currentFonts.heading.family}', sans-serif !important;
+          font-size: ${currentFonts.heading.size}px !important;
+        }
+        
+        h2 { font-size: ${currentFonts.heading.size * 0.8}px !important; }
+        h3 { font-size: ${currentFonts.heading.size * 0.7}px !important; }
+        h4 { font-size: ${currentFonts.heading.size * 0.6}px !important; }
+        h5 { font-size: ${currentFonts.heading.size * 0.5}px !important; }
+        h6 { font-size: ${currentFonts.heading.size * 0.4}px !important; }
+        
+        body, p, .text-muted, .mb-0 {
+          font-family: '${currentFonts.body.family}', sans-serif !important;
+          font-size: ${currentFonts.body.size}px !important;
+        }
+        
+        .navmenu a, .navmenu ul li a {
+          font-family: '${currentFonts.nav.family}', sans-serif !important;
+          font-size: ${currentFonts.nav.size}px !important;
+        }
+      `;
+
+      styleElement.textContent = css;
+    }
+
+    // Reset to default fonts
+    function resetFonts() {
+      currentFonts = {
+        heading: { family: 'Roboto', size: 32 },
+        body: { family: 'Roboto', size: 16 },
+        nav: { family: 'Roboto', size: 14 }
+      };
+
+      // Reset selects and sliders
+      document.getElementById('headingFont').value = 'Roboto';
+      document.getElementById('bodyFont').value = 'Roboto';
+      document.getElementById('navFont').value = 'Roboto';
+      
+      document.getElementById('headingSize').value = 32;
+      document.getElementById('bodySize').value = 16;
+      document.getElementById('navSize').value = 14;
+      
+      document.getElementById('headingSizeDisplay').textContent = '32px';
+      document.getElementById('bodySizeDisplay').textContent = '16px';
+      document.getElementById('navSizeDisplay').textContent = '14px';
+
+      // Reset previews
+      const headingPreview = document.getElementById('headingPreview');
+      const bodyPreview = document.getElementById('bodyPreview');
+      const navPreview = document.getElementById('navPreview');
+      
+      headingPreview.style.fontFamily = 'Roboto';
+      headingPreview.style.fontSize = '32px';
+      bodyPreview.style.fontFamily = 'Roboto';
+      bodyPreview.style.fontSize = '16px';
+      navPreview.style.fontFamily = 'Roboto';
+      navPreview.style.fontSize = '14px';
+
+      // Remove applied styles
+      const styleElement = document.getElementById('fontTesterStyles');
+      if (styleElement) {
+        styleElement.remove();
+      }
+
+      // Hide CSS output
+      document.getElementById('cssOutput').style.display = 'none';
+    }
+
+    // Export CSS
+    function exportCSS() {
+      const css = `/* KetraLabs Font Settings */
+/* Add this to your main.css file */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=${currentFonts.heading.family.replace(' ', '+')}:wght@300;400;500;600;700&family=${currentFonts.body.family.replace(' ', '+')}:wght@300;400;500;600;700&family=${currentFonts.nav.family.replace(' ', '+')}:wght@300;400;500;600;700&display=swap');
+
+/* Heading Fonts */
+h1, h2, h3, h4, h5, h6, .sitename {
+  font-family: '${currentFonts.heading.family}', sans-serif;
+}
+
+h1 { font-size: ${currentFonts.heading.size}px; }
+h2 { font-size: ${currentFonts.heading.size * 0.8}px; }
+h3 { font-size: ${currentFonts.heading.size * 0.7}px; }
+h4 { font-size: ${currentFonts.heading.size * 0.6}px; }
+h5 { font-size: ${currentFonts.heading.size * 0.5}px; }
+h6 { font-size: ${currentFonts.heading.size * 0.4}px; }
+
+/* Body Font */
+body, p, .text-muted {
+  font-family: '${currentFonts.body.family}', sans-serif;
+  font-size: ${currentFonts.body.size}px;
+}
+
+/* Navigation Font */
+.navmenu a, .navmenu ul li a {
+  font-family: '${currentFonts.nav.family}', sans-serif;
+  font-size: ${currentFonts.nav.size}px;
+}`;
+
+      document.getElementById('cssCode').textContent = css;
+      document.getElementById('cssOutput').style.display = 'block';
+
+      // Copy to clipboard
+      navigator.clipboard.writeText(css).then(() => {
+        alert('CSS copied to clipboard!');
+      });
+    }
+
+    // Initialize AOS
+    AOS.init();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>App Portfolio - Text Editor, Calendar & Quiz Tools | KetraLabs Material 3</title>
+  <meta name="description" content="Explore KetraLabs app portfolio featuring text editor, minimalist calendar app, and quiz maker utility for Mac, iOS, and Android platforms.">
+  <meta name="keywords" content="app portfolio, text editor app, calendar app, quiz maker, utility apps, Mac apps, iOS apps, Android apps, developer portfolio">
+  <meta name="author" content="Anuraj Kumar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ketralabs.com/gallery.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ketralabs.com/gallery.html">
+  <meta property="og:title" content="App Portfolio - KetraLabs Utilities">
+  <meta property="og:description" content="Explore our utility apps including text editor, calendar app, and quiz maker for multiple platforms.">
+  <meta property="og:image" content="https://ketralabs.com/assets/img/gallery/gallery-1.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ketralabs.com/gallery.html">
+  <meta property="twitter:title" content="App Portfolio - KetraLabs Utilities">
+  <meta property="twitter:description" content="Explore our utility apps including text editor, calendar app, and quiz maker for multiple platforms.">
+  <meta property="twitter:image" content="https://ketralabs.com/assets/img/gallery/gallery-1.jpg">
+  <meta property="twitter:creator" content="@tananurajkumar">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Material 3 Design System -->
+  <link href="material3-system.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header class="md-navigation-bar">
+    <div class="container flex justify-between items-center" style="width: 100%;">
+      <!-- Logo -->
+      <div class="flex items-center gap-8">
+        <span class="material-symbols-outlined" style="font-size: 32px; color: var(--md-sys-color-primary);">rocket_launch</span>
+        <span class="title-large" style="color: var(--md-sys-color-primary); font-weight: 500;">KetraLabs</span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="flex items-center gap-8">
+        <a href="m3-index.html" class="md-navigation-item">
+          <span class="material-symbols-outlined">home</span>
+          <span>Home</span>
+        </a>
+        <a href="#" class="md-navigation-item active">
+          <span class="material-symbols-outlined">apps</span>
+          <span>Projects</span>
+        </a>
+        <a href="m3-contact.html" class="md-navigation-item">
+          <span class="material-symbols-outlined">contact_mail</span>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="md-outlined-button" style="display: none;" id="mobile-menu-toggle">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section style="padding: 60px 0; background: linear-gradient(135deg, var(--md-sys-color-secondary-container) 0%, var(--md-sys-color-tertiary-container) 100%);">
+      <div class="container text-center">
+        <h1 class="display-small mb-16" style="color: var(--md-sys-color-on-secondary-container);">
+          Project Portfolio
+        </h1>
+        <p class="headline-small mb-32" style="color: var(--md-sys-color-on-secondary-container); opacity: 0.8; max-width: 700px; margin: 0 auto 32px;">
+          Explore my collection of utility applications designed to solve everyday problems. 
+          From fast text editing to intuitive calendar management and interactive quiz creation.
+        </p>
+        
+        <!-- Filter Chips -->
+        <div class="flex justify-center gap-8 flex-wrap">
+          <button class="md-outlined-button active-filter" data-filter="all">
+            <span class="material-symbols-outlined">apps</span>
+            <span>All Projects</span>
+          </button>
+          <button class="md-outlined-button" data-filter="productivity">
+            <span class="material-symbols-outlined">work</span>
+            <span>Productivity</span>
+          </button>
+          <button class="md-outlined-button" data-filter="mobile">
+            <span class="material-symbols-outlined">phone_android</span>
+            <span>Mobile</span>
+          </button>
+          <button class="md-outlined-button" data-filter="desktop">
+            <span class="material-symbols-outlined">desktop_mac</span>
+            <span>Desktop</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section style="padding: 80px 0;">
+      <div class="container">
+        <div class="grid grid-md-2 gap-24" id="projects-grid">
+          
+          <!-- Text Editor Project -->
+          <div class="project-item md-card" data-category="productivity mobile desktop" style="transition: all 0.3s ease;">
+            <div style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden; border-radius: var(--md-sys-shape-corner-medium) var(--md-sys-shape-corner-medium) 0 0;">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+                <span class="material-symbols-outlined" style="font-size: 80px; margin-bottom: 16px; display: block;">edit_note</span>
+                <h3 class="title-large">Fast Text Editor</h3>
+              </div>
+              <!-- Floating Action Button -->
+              <button class="md-filled-button" style="position: absolute; bottom: 16px; right: 16px; border-radius: 50%; width: 56px; height: 56px; padding: 0; min-height: 56px;">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </button>
+            </div>
+            <div class="md-card-content" style="padding: 24px;">
+              <div class="flex items-center gap-8 mb-16">
+                <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">edit_note</span>
+                <h3 class="title-large">Fast Text Editor</h3>
+              </div>
+              <p class="body-medium mb-16" style="color: var(--md-sys-color-on-surface-variant);">
+                Lightning-fast, local text editing experience with seamless synchronization across Mac, iOS, and Android platforms. 
+                Features syntax highlighting, auto-save, and distraction-free writing modes.
+              </p>
+              
+              <!-- Features List -->
+              <div class="flex flex-column gap-8 mb-16">
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Cross-platform synchronization</span>
+                </div>
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Syntax highlighting for 50+ languages</span>
+                </div>
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Distraction-free writing mode</span>
+                </div>
+              </div>
+              
+              <!-- Platform Tags -->
+              <div class="flex gap-8 mb-16 flex-wrap">
+                <span class="label-small" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 6px 12px; border-radius: 16px;">Mac</span>
+                <span class="label-small" style="background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); padding: 6px 12px; border-radius: 16px;">iOS</span>
+                <span class="label-small" style="background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); padding: 6px 12px; border-radius: 16px;">Android</span>
+              </div>
+              
+              <!-- Action Buttons -->
+              <div class="flex gap-8">
+                <a href="#" class="md-filled-button" style="flex: 1;">
+                  <span class="material-symbols-outlined">download</span>
+                  <span>Download</span>
+                </a>
+                <button class="md-outlined-button">
+                  <span class="material-symbols-outlined">info</span>
+                  <span>Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar App Project -->
+          <div class="project-item md-card" data-category="productivity mobile desktop" style="transition: all 0.3s ease;">
+            <div style="height: 300px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); position: relative; overflow: hidden; border-radius: var(--md-sys-shape-corner-medium) var(--md-sys-shape-corner-medium) 0 0;">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+                <span class="material-symbols-outlined" style="font-size: 80px; margin-bottom: 16px; display: block;">calendar_month</span>
+                <h3 class="title-large">Minimalist Calendar</h3>
+              </div>
+              <button class="md-filled-button" style="position: absolute; bottom: 16px; right: 16px; border-radius: 50%; width: 56px; height: 56px; padding: 0; min-height: 56px;">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </button>
+            </div>
+            <div class="md-card-content" style="padding: 24px;">
+              <div class="flex items-center gap-8 mb-16">
+                <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">calendar_month</span>
+                <h3 class="title-large">Minimalist Calendar</h3>
+              </div>
+              <p class="body-medium mb-16" style="color: var(--md-sys-color-on-surface-variant);">
+                Clean, intuitive calendar application with powerful scheduling features. Beautiful design that stays out of your way 
+                while providing all the functionality you need for effective time management.
+              </p>
+              
+              <!-- Features List -->
+              <div class="flex flex-column gap-8 mb-16">
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Smart event scheduling</span>
+                </div>
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Multiple calendar views</span>
+                </div>
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Dark mode support</span>
+                </div>
+              </div>
+              
+              <!-- Platform Tags -->
+              <div class="flex gap-8 mb-16 flex-wrap">
+                <span class="label-small" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 6px 12px; border-radius: 16px;">Cross-Platform</span>
+                <span class="label-small" style="background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); padding: 6px 12px; border-radius: 16px;">Sync</span>
+                <span class="label-small" style="background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); padding: 6px 12px; border-radius: 16px;">Themes</span>
+              </div>
+              
+              <!-- Action Buttons -->
+              <div class="flex gap-8">
+                <a href="#" class="md-filled-button" style="flex: 1;">
+                  <span class="material-symbols-outlined">download</span>
+                  <span>Download</span>
+                </a>
+                <button class="md-outlined-button">
+                  <span class="material-symbols-outlined">info</span>
+                  <span>Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quiz Maker Project -->
+          <div class="project-item md-card" data-category="productivity desktop" style="transition: all 0.3s ease;">
+            <div style="height: 300px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); position: relative; overflow: hidden; border-radius: var(--md-sys-shape-corner-medium) var(--md-sys-shape-corner-medium) 0 0;">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+                <span class="material-symbols-outlined" style="font-size: 80px; margin-bottom: 16px; display: block;">quiz</span>
+                <h3 class="title-large">Quiz Maker Utility</h3>
+              </div>
+              <button class="md-filled-button" style="position: absolute; bottom: 16px; right: 16px; border-radius: 50%; width: 56px; height: 56px; padding: 0; min-height: 56px;">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </button>
+            </div>
+            <div class="md-card-content" style="padding: 24px;">
+              <div class="flex items-center gap-8 mb-16">
+                <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">quiz</span>
+                <h3 class="title-large">Quiz Maker Utility</h3>
+              </div>
+              <p class="body-medium mb-16" style="color: var(--md-sys-color-on-surface-variant);">
+                Transform CSV and XLSX files into interactive self-examination quizzes with progress tracking and detailed analytics. 
+                Perfect for students, educators, and professionals preparing for certifications.
+              </p>
+              
+              <!-- Features List -->
+              <div class="flex flex-column gap-8 mb-16">
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">CSV/XLSX file import</span>
+                </div>
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Progress tracking & analytics</span>
+                </div>
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Multiple question types</span>
+                </div>
+              </div>
+              
+              <!-- Platform Tags -->
+              <div class="flex gap-8 mb-16 flex-wrap">
+                <span class="label-small" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 6px 12px; border-radius: 16px;">CSV Import</span>
+                <span class="label-small" style="background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); padding: 6px 12px; border-radius: 16px;">Analytics</span>
+                <span class="label-small" style="background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); padding: 6px 12px; border-radius: 16px;">Self-Exam</span>
+              </div>
+              
+              <!-- Action Buttons -->
+              <div class="flex gap-8">
+                <a href="#" class="md-filled-button" style="flex: 1;">
+                  <span class="material-symbols-outlined">download</span>
+                  <span>Download</span>
+                </a>
+                <button class="md-outlined-button">
+                  <span class="material-symbols-outlined">info</span>
+                  <span>Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Development Process Project -->
+          <div class="project-item md-card" data-category="productivity" style="transition: all 0.3s ease;">
+            <div style="height: 300px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); position: relative; overflow: hidden; border-radius: var(--md-sys-shape-corner-medium) var(--md-sys-shape-corner-medium) 0 0;">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #333; text-align: center;">
+                <span class="material-symbols-outlined" style="font-size: 80px; margin-bottom: 16px; display: block;">code</span>
+                <h3 class="title-large">Development Workflow</h3>
+              </div>
+              <button class="md-filled-button" style="position: absolute; bottom: 16px; right: 16px; border-radius: 50%; width: 56px; height: 56px; padding: 0; min-height: 56px;">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </button>
+            </div>
+            <div class="md-card-content" style="padding: 24px;">
+              <div class="flex items-center gap-8 mb-16">
+                <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">code</span>
+                <h3 class="title-large">Development Process</h3>
+              </div>
+              <p class="body-medium mb-16" style="color: var(--md-sys-color-on-surface-variant);">
+                From concept to deployment - explore my development workflow, tools, and methodologies. 
+                Learn about the technologies and processes behind creating cross-platform utility applications.
+              </p>
+              
+              <!-- Features List -->
+              <div class="flex flex-column gap-8 mb-16">
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Agile development methodology</span>
+                </div>
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">Continuous integration/deployment</span>
+                </div>
+                <div class="flex items-center gap-8">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--md-sys-color-tertiary);">check_circle</span>
+                  <span class="body-small">User-centered design approach</span>
+                </div>
+              </div>
+              
+              <!-- Platform Tags -->
+              <div class="flex gap-8 mb-16 flex-wrap">
+                <span class="label-small" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 6px 12px; border-radius: 16px;">Process</span>
+                <span class="label-small" style="background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); padding: 6px 12px; border-radius: 16px;">Workflow</span>
+                <span class="label-small" style="background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); padding: 6px 12px; border-radius: 16px;">Best Practices</span>
+              </div>
+              
+              <!-- Action Buttons -->
+              <div class="flex gap-8">
+                <a href="#" class="md-outlined-button" style="flex: 1;">
+                  <span class="material-symbols-outlined">article</span>
+                  <span>Read More</span>
+                </a>
+                <button class="md-outlined-button">
+                  <span class="material-symbols-outlined">info</span>
+                  <span>Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section style="padding: 80px 0; background-color: var(--md-sys-color-surface-container);">
+      <div class="container">
+        <div class="text-center mb-32">
+          <h2 class="headline-large mb-16">Technology Stack</h2>
+          <p class="body-large" style="color: var(--md-sys-color-on-surface-variant); max-width: 600px; margin: 0 auto;">
+            The tools and technologies I use to bring ideas to life across multiple platforms.
+          </p>
+        </div>
+
+        <div class="grid grid-md-4 gap-16">
+          <div class="md-card text-center">
+            <div class="md-card-content">
+              <span class="material-symbols-outlined" style="font-size: 48px; color: var(--md-sys-color-primary); margin-bottom: 16px; display: block;">phone_android</span>
+              <h3 class="title-medium mb-8">Mobile Development</h3>
+              <p class="body-small" style="color: var(--md-sys-color-on-surface-variant);">React Native, Flutter, Swift, Kotlin</p>
+            </div>
+          </div>
+
+          <div class="md-card text-center">
+            <div class="md-card-content">
+              <span class="material-symbols-outlined" style="font-size: 48px; color: var(--md-sys-color-secondary); margin-bottom: 16px; display: block;">web</span>
+              <h3 class="title-medium mb-8">Web Technologies</h3>
+              <p class="body-small" style="color: var(--md-sys-color-on-surface-variant);">React, Node.js, TypeScript, Next.js</p>
+            </div>
+          </div>
+
+          <div class="md-card text-center">
+            <div class="md-card-content">
+              <span class="material-symbols-outlined" style="font-size: 48px; color: var(--md-sys-color-tertiary); margin-bottom: 16px; display: block;">cloud</span>
+              <h3 class="title-medium mb-8">Cloud & Backend</h3>
+              <p class="body-small" style="color: var(--md-sys-color-on-surface-variant);">AWS, Firebase, PostgreSQL, Redis</p>
+            </div>
+          </div>
+
+          <div class="md-card text-center">
+            <div class="md-card-content">
+              <span class="material-symbols-outlined" style="font-size: 48px; color: var(--md-sys-color-primary); margin-bottom: 16px; display: block;">build</span>
+              <h3 class="title-medium mb-8">Tools & DevOps</h3>
+              <p class="body-small" style="color: var(--md-sys-color-on-surface-variant);">Docker, GitHub Actions, Figma, VS Code</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0;">
+      <div class="container text-center">
+        <h2 class="headline-large mb-16">Interested in Collaborating?</h2>
+        <p class="body-large mb-32" style="color: var(--md-sys-color-on-surface-variant); max-width: 500px; margin: 0 auto 32px;">
+          Have an idea for a utility app or need development expertise? Let's discuss how we can work together.
+        </p>
+        <div class="flex justify-center gap-16">
+          <a href="m3-contact.html" class="md-filled-button">
+            <span class="material-symbols-outlined">contact_mail</span>
+            <span>Get in Touch</span>
+          </a>
+          <a href="mailto:support@ketralabs.com" class="md-outlined-button">
+            <span class="material-symbols-outlined">mail</span>
+            <span>Email Directly</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background-color: var(--md-sys-color-surface-container); padding: 40px 0;">
+    <div class="container">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-8">
+          <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">rocket_launch</span>
+          <span class="title-medium" style="color: var(--md-sys-color-primary);">KetraLabs</span>
+        </div>
+        <div class="flex items-center gap-16">
+          <a href="https://x.com/tananurajkumar" target="_blank" rel="noopener" class="md-navigation-item">
+            <span class="material-symbols-outlined">alternate_email</span>
+          </a>
+          <a href="mailto:support@ketralabs.com" class="md-navigation-item">
+            <span class="material-symbols-outlined">mail</span>
+          </a>
+        </div>
+      </div>
+      <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--md-sys-color-outline-variant); text-align: center;">
+        <p class="body-small" style="color: var(--md-sys-color-on-surface-variant);">
+          © 2024 KetraLabs. All rights reserved. Built with Material 3 Design System.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu functionality
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const nav = document.querySelector('nav');
+    
+    function updateMobileMenu() {
+      if (window.innerWidth < 768) {
+        mobileToggle.style.display = 'inline-flex';
+        nav.style.display = 'none';
+      } else {
+        mobileToggle.style.display = 'none';
+        nav.style.display = 'flex';
+      }
+    }
+    
+    window.addEventListener('resize', updateMobileMenu);
+    updateMobileMenu();
+    
+    mobileToggle.addEventListener('click', () => {
+      nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
+    });
+
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Update active filter button
+        filterButtons.forEach(btn => btn.classList.remove('active-filter'));
+        button.classList.add('active-filter');
+
+        const filter = button.getAttribute('data-filter');
+
+        // Filter projects
+        projectItems.forEach(item => {
+          const categories = item.getAttribute('data-category');
+          
+          if (filter === 'all' || categories.includes(filter)) {
+            item.style.display = 'block';
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+              if (item.style.opacity === '0') {
+                item.style.display = 'none';
+              }
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Project card hover animations
+    projectItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.transform = 'translateY(-8px)';
+        item.style.boxShadow = 'var(--md-sys-elevation-level3)';
+      });
+
+      item.addEventListener('mouseleave', () => {
+        item.style.transform = '';
+        item.style.boxShadow = '';
+      });
+    });
+
+    // Add active filter styling
+    const style = document.createElement('style');
+    style.textContent = `
+      .active-filter {
+        background-color: var(--md-sys-color-primary) !important;
+        color: var(--md-sys-color-on-primary) !important;
+        border-color: var(--md-sys-color-primary) !important;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
