@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cathexis - Your Private Panic Attack Companion | KetraLabs</title>
+  <meta name="description" content="Cathexis is a mental health app for panic attacks and acute anxiety. Science-based breathing exercises, grounding techniques, and crisis support—all offline and private.">
+  <meta name="keywords" content="panic attack app, anxiety app, mental health, breathing exercises, grounding techniques, CBT, offline mental health, iOS app">
+  <meta name="author" content="Anuraj Kumar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ketralabs.com/cathexis/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ketralabs.com/cathexis/">
+  <meta property="og:title" content="Cathexis - Your Private Panic Attack Companion">
+  <meta property="og:description" content="Science-based panic attack support with breathing exercises, grounding techniques, and crisis tools. Works offline. Privacy-first.">
+  <meta property="og:image" content="https://ketralabs.com/assets/img/cathexis/image1.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ketralabs.com/cathexis/">
+  <meta property="twitter:title" content="Cathexis - Your Private Panic Attack Companion">
+  <meta property="twitter:description" content="Science-based panic attack support with breathing exercises, grounding techniques, and crisis tools. Works offline. Privacy-first.">
+  <meta property="twitter:image" content="https://ketralabs.com/assets/img/cathexis/image1.jpg">
+  <meta property="twitter:creator" content="@tananurajkumar">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom Cathexis Page Styles -->
+  <style>
+    .cathexis-page .page-title {
+      background: var(--surface-color);
+      padding: 60px 0;
+      margin-bottom: 0;
+      border-bottom: 4px solid var(--accent-color);
+    }
+
+    .cathexis-page .page-title h1 {
+      background: linear-gradient(135deg, var(--accent-color), #20c997);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .cathexis-page .page-title .tagline {
+      color: var(--default-color);
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .cathexis-page .cta-btn {
+      background: linear-gradient(135deg, var(--accent-color), #20c997);
+      color: #ffffff;
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .cathexis-page .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(39, 167, 118, 0.4);
+      color: #ffffff;
+    }
+
+    .cathexis-page .breadcrumbs {
+      background: var(--background-color);
+      padding: 15px 0;
+    }
+
+    .cathexis-page .breadcrumbs ol {
+      margin: 0;
+    }
+
+    .cathexis-page .breadcrumbs a {
+      color: var(--accent-color);
+    }
+
+    .cathexis-page .portfolio-info {
+      background: var(--surface-color);
+      border: 2px solid rgba(39, 167, 118, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cathexis-page .portfolio-info h3 {
+      color: var(--accent-color);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .cathexis-page .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cathexis-page .portfolio-info ul li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--default-color);
+    }
+
+    .cathexis-page .portfolio-info ul li:last-child {
+      border-bottom: none;
+    }
+
+    .cathexis-page .portfolio-info ul li strong {
+      color: var(--heading-color);
+      margin-right: 0.5rem;
+    }
+
+    .cathexis-page .btn-visit {
+      background: linear-gradient(135deg, var(--accent-color), #20c997);
+      color: #ffffff;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s ease;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .cathexis-page .btn-visit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(39, 167, 118, 0.3);
+      color: #ffffff;
+    }
+
+    .cathexis-page .feature-card {
+      background: var(--surface-color);
+      border: 2px solid rgba(39, 167, 118, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .cathexis-page .feature-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(39, 167, 118, 0.2);
+    }
+
+    .cathexis-page .feature-card h3 {
+      color: var(--accent-color);
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cathexis-page .feature-card p {
+      color: var(--default-color);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .cathexis-page .feature-card ul {
+      color: var(--default-color);
+      margin-bottom: 0;
+    }
+
+    .cathexis-page .feature-card ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cathexis-page .testimonial-item {
+      background: rgba(39, 167, 118, 0.1);
+      border-left: 4px solid var(--accent-color);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
+    .cathexis-page .swiper-slide {
+      width: 400px !important;
+      max-width: 90vw;
+    }
+
+    .cathexis-page .swiper-slide img {
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .cathexis-page .page-title h1 {
+        font-size: 2rem;
+      }
+
+      .cathexis-page .page-title .tagline {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: KetraLabs
+  * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="cathexis-page project-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-center">
+
+      <a href="../index.html" class="logo d-flex align-items-center position-absolute start-0 px-2">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="../assets/img/logo.png" alt=""> -->
+        <i class="bi bi-rocket-takeoff"></i>
+        <h1 class="sitename">KetraLabs</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html">Home<br></a></li>
+          <li><a href="../projects.html"><span>Projects<br></a></li>
+          <li><a href="index.html" class="active">Cathexis App</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-10">
+              <h1>Cathexis</h1>
+              <p class="tagline">Your private companion for managing panic attacks with science-based techniques—built for moments when you need immediate support.</p>
+              <a href="support.html" class="cta-btn">Get Support</a>
+              <a href="privacypolicy.html" class="cta-btn ms-2">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- End Page Title -->
+
+    <!-- Project Details Section -->
+    <section id="project-details" class="gallery-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="../assets/img/cathexis/image1.jpg" alt="Truth Cards - Rewire Your Thoughts with Reassurance">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="../assets/img/cathexis/image2.jpg" alt="SOS Mode - Immediate Relief for Panic Attacks">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="../assets/img/cathexis/image3.jpg" alt="Breathing Exercises - Create Your Own Patterns">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="../assets/img/cathexis/image4.jpg" alt="Cathexis Home - Complete Mental Health Toolkit">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="../assets/img/cathexis/image5.jpg" alt="Thoughtful Distractions - Calming Interactive Games">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="../assets/img/cathexis/image6.jpg" alt="100% Offline, Ads Free, Dark Mode - Privacy First">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Your Private Panic Attack Companion</h2>
+              <p>
+                Cathexis is a mental health app designed specifically for people experiencing panic attacks and acute anxiety. With a <strong>"panic-first"</strong> design philosophy, the app provides instant access to proven grounding techniques, breathing exercises, and reassurance tools that help you regain control during overwhelming moments.
+              </p>
+              <p>
+                Unlike generic wellness apps, Cathexis is built for crisis moments—when you need immediate, effective support. Every feature is accessible with minimal taps, works completely offline, and prioritizes your privacy above all else.
+              </p>
+
+              <!-- Core Features -->
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-heart-pulse-fill me-2"></i>Instant SOS Mode</h3>
+                <p>One tap activates a guided recovery sequence with breathing exercises, haptic feedback, and grounding techniques. Quick access to emergency contacts when you need support most.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-lungs-fill me-2"></i>Breathing Exercises</h3>
+                <p>Multiple proven patterns including:</p>
+                <ul>
+                  <li><strong>Box Breathing</strong> (4-4-4-4)</li>
+                  <li><strong>Extended Exhale</strong> (4-6 pattern)</li>
+                  <li><strong>3-2-3 Method</strong></li>
+                  <li><strong>Customizable cycles</strong> to match your needs</li>
+                </ul>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-hand-index-thumb me-2"></i>5-4-3-2-1 Grounding Technique</h3>
+                <p>Interactive sensory awareness exercise that reconnects you with the present moment by identifying things you <strong>see, touch, hear, smell, and taste</strong>.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-card-text me-2"></i>Truth Cards & Affirmations</h3>
+                <ul>
+                  <li>15+ pre-written reassurance cards</li>
+                  <li>Create custom cards with personal affirmations</li>
+                  <li>Spaced-repetition practice system to build mental resilience</li>
+                  <li>Quick access during panic attacks</li>
+                </ul>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-clipboard-data me-2"></i>Private Attack Logging</h3>
+                <p>Track patterns and triggers with detailed logs including:</p>
+                <ul>
+                  <li>Intensity levels (1-10 scale)</li>
+                  <li>Duration tracking</li>
+                  <li>Trigger identification</li>
+                  <li>Intervention effectiveness</li>
+                  <li>Notes and observations</li>
+                  <li><strong>All data encrypted and stored locally</strong></li>
+                </ul>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-music-note-beamed me-2"></i>Rest & Distraction Tools</h3>
+                <ul>
+                  <li><strong>Sleep Sounds:</strong> High-quality nature soundscapes with sleep timers</li>
+                  <li><strong>Bubble Pop Game:</strong> Infinite, stress-free distraction to calm your mind</li>
+                </ul>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-gear-fill me-2"></i>Highly Customizable</h3>
+                <ul>
+                  <li>3 theme modes (Light, Dark, Bedtime)</li>
+                  <li>5 font families for readability</li>
+                  <li>Adjustable haptic feedback intensity</li>
+                  <li>Personalized settings for your comfort</li>
+                </ul>
+              </div>
+
+              <div class="testimonial-item" data-aos="fade-up">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Cathexis has become my go-to tool during panic attacks. The breathing exercises and grounding techniques are exactly what I need in the moment, and knowing my data stays private on my device gives me peace of mind.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+
+              <h2 class="mt-5">Privacy & Security</h2>
+              <p><strong>Privacy-First Design</strong></p>
+              <ul>
+                <li>✅ All journal entries and panic logs stored locally with encryption</li>
+                <li>✅ Optional analytics and crash reporting (disabled by default)</li>
+                <li>✅ No advertisements, ever</li>
+                <li>✅ Optional sign-in for future features</li>
+                <li>✅ Core features work 100% offline</li>
+              </ul>
+
+              <p class="mt-4">
+                Essential tools like breathing exercises, grounding techniques, and SOS mode function without internet connection—perfect for airplanes, subways, or remote areas.
+              </p>
+
+              <h2 class="mt-5">Who Is Cathexis For?</h2>
+              <ul>
+                <li>✅ People experiencing panic attacks or acute anxiety</li>
+                <li>✅ Those seeking immediate grounding techniques</li>
+                <li>✅ Anyone building preventive anxiety management skills</li>
+                <li>✅ Individuals who value privacy and local data storage</li>
+                <li>✅ Users who need tools that work offline</li>
+              </ul>
+
+              <div class="alert alert-warning mt-4" role="alert">
+                <h4><i class="bi bi-exclamation-triangle-fill me-2"></i>Medical Disclaimer</h4>
+                <p class="mb-0">Cathexis is a <strong>general wellness tool</strong>, not a medical device. It does not provide medical diagnosis or treatment. If you're experiencing a medical emergency, call emergency services (911, 999, 112) immediately.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>App Information</h3>
+              <ul>
+                <li><strong>Category:</strong> Health & Fitness</li>
+                <li><strong>Version:</strong> 1.0.0</li>
+                <li><strong>Platform:</strong> iOS (iPhone & iPad)</li>
+                <li><strong>Developer:</strong> Ketra Labs</li>
+                <li><strong>Price:</strong> Free</li>
+                <li><strong>Requires:</strong> iOS 12.0 or later</li>
+                <li><strong>Size:</strong> ~100 MB</li>
+                <li><strong>Contact:</strong> <a href="mailto:support@ketralabs.com">support@ketralabs.com</a></li>
+              </ul>
+            </div>
+
+            <!-- Key Differentiators -->
+            <div class="portfolio-info">
+              <h3>Key Differentiators</h3>
+              <ul>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Panic-First Design</strong><br>Built for crisis moments</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Offline Capability</strong><br>Works without internet</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Privacy-Focused</strong><br>Local data storage</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>No Ads</strong><br>Distraction-free experience</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Science-Based</strong><br>Uses proven CBT techniques</li>
+              </ul>
+            </div>
+
+            <!-- Download Links -->
+            <div class="portfolio-info">
+              <h3>Download & Links</h3>
+              <ul>
+                <li><a href="#" class="btn-visit"><i class="bi bi-apple me-2"></i>iOS App Store</a></li>
+                <li><a href="support.html" class="btn-visit"><i class="bi bi-question-circle me-2"></i>Get Support</a></li>
+                <li><a href="privacypolicy.html" class="btn-visit"><i class="bi bi-shield-lock me-2"></i>Privacy Policy</a></li>
+                <li><a href="../projects.html" class="btn-visit"><i class="bi bi-grid me-2"></i>All Projects</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Project Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">KetraLabs</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://x.com/tananurajkumar" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+        <a href="mailto:support@ketralabs.com"><i class="bi bi-envelope"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a> -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
