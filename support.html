@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cathexis Support - Your Personal Panic Attack Companion</title>
+  <meta name="description" content="Get help with Cathexis, your personal panic attack support app. Find guides, troubleshooting tips, and emergency resources. Available 24/7 for iOS.">
+  <meta name="keywords" content="Cathexis support, panic attack app help, anxiety app support, breathing exercises, mental health app, iOS support">
+  <meta name="author" content="Anuraj Kumar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ketralabs.com/support.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ketralabs.com/support.html">
+  <meta property="og:title" content="Cathexis Support - Panic Attack Companion">
+  <meta property="og:description" content="Get help with Cathexis, your personal panic attack support app. Find guides, troubleshooting tips, and emergency resources.">
+  <meta property="og:image" content="https://ketralabs.com/assets/img/logo.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ketralabs.com/support.html">
+  <meta property="twitter:title" content="Cathexis Support - Panic Attack Companion">
+  <meta property="twitter:description" content="Get help with Cathexis, your personal panic attack support app. Find guides, troubleshooting tips, and emergency resources.">
+  <meta property="twitter:image" content="https://ketralabs.com/assets/img/logo.png">
+  <meta property="twitter:creator" content="@tananurajkumar">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom Support Page Styles -->
+  <style>
+    /* Support Page Specific Styles */
+    .support-page .page-title {
+      background: var(--surface-color);
+      padding: 60px 0;
+      margin-bottom: 40px;
+      border-bottom: 4px solid var(--accent-color);
+    }
+
+    .support-page .page-title h1 {
+      background: linear-gradient(135deg, var(--accent-color), #20c997);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .support-page .page-title .lead {
+      color: var(--default-color);
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .support-page .page-title p {
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+    }
+
+    /* Alert Styling */
+    .support-page .alert {
+      background: var(--surface-color);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .support-page .alert-info {
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .support-page .alert-info p,
+    .support-page .alert-info strong,
+    .support-page .alert-info small {
+      color: var(--default-color) !important;
+    }
+
+    .support-page .alert-info a {
+      color: #ffffff !important;
+      text-decoration: underline;
+    }
+
+    .support-page .alert-info a:hover {
+      color: var(--accent-color) !important;
+    }
+
+    .support-page .alert-danger {
+      border-left: 4px solid #dc3545;
+    }
+
+    .support-page .alert-warning {
+      border-left: 4px solid #ffc107;
+      background: rgba(255, 193, 7, 0.05);
+    }
+
+    .support-page .alert h4,
+    .support-page .alert h5 {
+      color: var(--heading-color);
+      margin-bottom: 1rem;
+    }
+
+    .support-page .alert a {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    /* Card Styling */
+    .support-page .card {
+      background: var(--surface-color);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .support-page .card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(39, 167, 118, 0.2);
+    }
+
+    .support-page .card-title {
+      color: var(--heading-color);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .support-page .card-body {
+      padding: 1.5rem;
+    }
+
+    .support-page .card ul {
+      margin-bottom: 0;
+    }
+
+    .support-page .card li {
+      color: var(--default-color);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Section Headings */
+    .support-page h2 {
+      color: var(--heading-color);
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid rgba(39, 167, 118, 0.3);
+    }
+
+    .support-page h2 i {
+      color: var(--accent-color);
+    }
+
+    .support-page h3 {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    .support-page h4 {
+      color: var(--heading-color);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .support-page h5 {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    /* Accordion Styling */
+    .support-page .accordion-item {
+      background: var(--surface-color);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .support-page .accordion-button {
+      background: var(--surface-color);
+      color: var(--default-color);
+      font-weight: 600;
+      padding: 1.25rem 1.5rem;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .support-page .accordion-button:not(.collapsed) {
+      background: rgba(39, 167, 118, 0.1);
+      color: var(--accent-color);
+      box-shadow: none;
+    }
+
+    .support-page .accordion-button:focus {
+      box-shadow: 0 0 0 0.2rem rgba(39, 167, 118, 0.25);
+      border-color: var(--accent-color);
+    }
+
+    .support-page .accordion-button::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2327a776'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    .support-page .accordion-button i {
+      color: var(--accent-color);
+      margin-right: 0.5rem;
+    }
+
+    .support-page .accordion-body {
+      background: var(--surface-color);
+      color: var(--default-color);
+      padding: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .support-page .accordion-body p {
+      color: var(--default-color);
+    }
+
+    .support-page .accordion-body ul {
+      color: var(--default-color);
+    }
+
+    .support-page .accordion-body li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* List Styling */
+    .support-page ul {
+      color: var(--default-color);
+    }
+
+    .support-page ol {
+      color: var(--default-color);
+    }
+
+    .support-page li {
+      margin-bottom: 0.75rem;
+    }
+
+    /* Links */
+    .support-page a {
+      color: var(--accent-color);
+      transition: all 0.3s ease;
+    }
+
+    .support-page a:hover {
+      color: #20c997;
+    }
+
+    /* Final CTA Card */
+    .support-page .bg-primary {
+      background: linear-gradient(135deg, var(--accent-color), #20c997) !important;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(39, 167, 118, 0.3);
+    }
+
+    .support-page .bg-primary h3 {
+      color: #ffffff !important;
+    }
+
+    .support-page .bg-primary .lead {
+      color: #ffffff !important;
+    }
+
+    .support-page .bg-primary p {
+      color: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    .support-page .bg-primary hr {
+      opacity: 0.3;
+    }
+
+    .support-page .bg-primary a {
+      color: #ffffff !important;
+    }
+
+    /* Support Section */
+    .support.section {
+      padding: 40px 0 60px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .support-page .page-title h1 {
+        font-size: 2rem;
+      }
+
+      .support-page .page-title .lead {
+        font-size: 1.2rem;
+      }
+
+      .support-page h2 {
+        font-size: 1.5rem;
+      }
+
+      .support-page .alert,
+      .support-page .card {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: KetraLabs
+  * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="support-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-center">
+
+      <a href="index.html" class="logo d-flex align-items-center position-absolute start-0 px-2">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <i class="bi bi-rocket-takeoff"></i>
+        <h1 class="sitename">KetraLabs</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home<br></a></li>
+          <li><a href="projects.html"><span>Projects<br></a></li>
+          <li><a href="support.html" class="active">Support</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container text-center">
+        <h1>Cathexis Support</h1>
+        <p class="lead">Your Personal Panic Attack Companion</p>
+        <p>We're here to help you get the most out of your panic attack support app.</p>
+      </div>
+    </div>
+
+    <!-- Support Content -->
+    <section id="support" class="support section">
+      <div class="container">
+
+        <!-- Contact Us -->
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <div class="alert alert-info" role="alert">
+              <h4><i class="bi bi-envelope-fill me-2"></i>Contact Us</h4>
+              <p class="mb-2"><strong>Support Email:</strong> <a href="mailto:support@ketralabs.com">support@ketralabs.com</a></p>
+              <p class="mb-2"><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+              <p class="mb-0"><small>For urgent issues, please include: Device type and iOS version, App version (found in Settings), Detailed description of the issue, and Screenshots if applicable.</small></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency Resources -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <div class="alert alert-danger" role="alert">
+              <h4><i class="bi bi-exclamation-triangle-fill me-2"></i>Emergency Resources</h4>
+              <p><strong>⚠️ IMPORTANT: Cathexis is NOT a substitute for emergency services.</strong></p>
+            </div>
+            
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">🇺🇸 United States</h5>
+                    <ul class="list-unstyled">
+                      <li><strong>Emergency:</strong> 911</li>
+                      <li><strong>Mental Health Crisis:</strong> 988 (Suicide & Crisis Lifeline)</li>
+                      <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">🇬🇧 United Kingdom</h5>
+                    <ul class="list-unstyled">
+                      <li><strong>Emergency:</strong> 999</li>
+                      <li><strong>Mental Health:</strong> 116 123 (Samaritans)</li>
+                      <li><strong>Crisis Text:</strong> Text SHOUT to 85258</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">🇪🇺 European Union</h5>
+                    <ul class="list-unstyled">
+                      <li><strong>Emergency:</strong> 112</li>
+                      <li><strong>Mental Health:</strong> Contact your local crisis service</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">🇦🇺 Australia</h5>
+                    <ul class="list-unstyled">
+                      <li><strong>Emergency:</strong> 000</li>
+                      <li><strong>Mental Health:</strong> 13 11 14 (Lifeline)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">🇨🇦 Canada</h5>
+                    <ul class="list-unstyled">
+                      <li><strong>Emergency:</strong> 911</li>
+                      <li><strong>Mental Health Crisis:</strong> 1-833-456-4566</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Start Guide -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-rocket-takeoff me-2"></i>Quick Start Guide</h2>
+            <h4>First Time Using Cathexis?</h4>
+            <ol class="mb-4">
+              <li><strong>Explore the Home Screen</strong> - Purple SOS button for immediate panic support. Navigation tabs: Home, Breathing, Journal, Settings</li>
+              <li><strong>Set Up Emergency Contacts</strong> (Optional) - Settings → Emergency Contacts. Add trusted contacts for quick access during crisis</li>
+              <li><strong>Customize Your Experience</strong> - Settings → Theme (choose your preferred visual style). Settings → Breathing Patterns (customize timing)</li>
+              <li><strong>During a Panic Attack</strong> - Tap the large purple SOS button, follow guided breathing exercises, use 5-4-3-2-1 Grounding technique, read Truth Cards for reassurance</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Feature Guides -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-book me-2"></i>Feature Guides</h2>
+            
+            <div class="accordion" id="featuresAccordion">
+              <!-- SOS Mode -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sosMode">
+                    <i class="bi bi-heart-pulse-fill me-2"></i>SOS Mode
+                  </button>
+                </h3>
+                <div id="sosMode" class="accordion-collapse collapse show" data-bs-parent="#featuresAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Immediate panic attack support when you need it most.</strong></p>
+                    <ul>
+                      <li>Tap the purple SOS button on home screen</li>
+                      <li>Access calming voice guidance</li>
+                      <li>Follow breathing exercises</li>
+                      <li>Use grounding techniques</li>
+                      <li>Quick access to emergency contacts</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Breathing Exercises -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#breathing">
+                    <i class="bi bi-lungs-fill me-2"></i>Breathing Exercises
+                  </button>
+                </h3>
+                <div id="breathing" class="accordion-collapse collapse" data-bs-parent="#featuresAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Multiple proven breathing patterns with visual guidance.</strong></p>
+                    <p>Available patterns:</p>
+                    <ul>
+                      <li><strong>4-7-8 Breathing:</strong> Inhale 4s, Hold 7s, Exhale 8s</li>
+                      <li><strong>Box Breathing:</strong> Equal timing (4-4-4-4)</li>
+                      <li><strong>Deep Breathing:</strong> Slow, calming breaths</li>
+                      <li><strong>Custom:</strong> Create your own pattern</li>
+                    </ul>
+                    <p class="mb-0"><em>Tip: Practice breathing exercises when calm to build muscle memory.</em></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5-4-3-2-1 Grounding -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#grounding">
+                    <i class="bi bi-hand-index-thumb me-2"></i>5-4-3-2-1 Grounding
+                  </button>
+                </h3>
+                <div id="grounding" class="accordion-collapse collapse" data-bs-parent="#featuresAccordion">
+                  <div class="accordion-body">
+                    <p><strong>A sensory technique to reconnect with the present moment.</strong></p>
+                    <p>Identify:</p>
+                    <ul>
+                      <li>5 things you can <strong>see</strong></li>
+                      <li>4 things you can <strong>touch</strong></li>
+                      <li>3 things you can <strong>hear</strong></li>
+                      <li>2 things you can <strong>smell</strong></li>
+                      <li>1 thing you can <strong>taste</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Truth Cards -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#truthCards">
+                    <i class="bi bi-card-text me-2"></i>Truth Cards
+                  </button>
+                </h3>
+                <div id="truthCards" class="accordion-collapse collapse" data-bs-parent="#featuresAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Challenge panic thoughts with reassuring truths.</strong></p>
+                    <ul>
+                      <li>Browse 15+ pre-written cards</li>
+                      <li>Create custom cards with personal affirmations</li>
+                      <li>Quick access during panic attacks</li>
+                      <li>Edit or delete cards anytime</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Attack Logging -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#logging">
+                    <i class="bi bi-clipboard-data me-2"></i>Attack Logging
+                  </button>
+                </h3>
+                <div id="logging" class="accordion-collapse collapse" data-bs-parent="#featuresAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Track your panic attacks to identify patterns.</strong></p>
+                    <p>Log details:</p>
+                    <ul>
+                      <li>Date and time</li>
+                      <li>Intensity (1-10)</li>
+                      <li>Duration</li>
+                      <li>Location</li>
+                      <li>Triggers</li>
+                      <li>Symptoms</li>
+                      <li>What helped</li>
+                    </ul>
+                    <p class="mb-0"><em>Why log? Tracking helps you and your therapist identify patterns and triggers.</em></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Journaling -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#journaling">
+                    <i class="bi bi-journal-text me-2"></i>Journaling & Mood Tracking
+                  </button>
+                </h3>
+                <div id="journaling" class="accordion-collapse collapse" data-bs-parent="#featuresAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Express yourself with guided prompts.</strong></p>
+                    <p>Features:</p>
+                    <ul>
+                      <li>30+ guided journal prompts</li>
+                      <li>Free-form writing</li>
+                      <li>Mood tracking (1-10 scale)</li>
+                      <li>Rich text formatting</li>
+                      <li>Private and encrypted</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Privacy & Security -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-shield-lock-fill me-2"></i>Privacy & Security</h2>
+            <h4>Your Data, Your Device</h4>
+            <p>Cathexis is designed with privacy as the top priority:</p>
+            <ul>
+              <li>✅ <strong>100% Offline Functionality</strong> - No internet required</li>
+              <li>✅ <strong>Local Storage Only</strong> - All data stays on your device</li>
+              <li>✅ <strong>Encrypted</strong> - Protected with iOS security</li>
+              <li>✅ <strong>No Tracking</strong> - Zero third-party analytics by default</li>
+              <li>✅ <strong>No Ads</strong> - Ad-free experience</li>
+              <li>✅ <strong>No Account Required</strong> - Use immediately, no sign-up</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-tools me-2"></i>Troubleshooting</h2>
+            
+            <div class="accordion" id="troubleshootingAccordion">
+              <!-- Audio Not Playing -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#audioIssue">
+                    Audio Not Playing
+                  </button>
+                </h3>
+                <div id="audioIssue" class="accordion-collapse collapse show" data-bs-parent="#troubleshootingAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Problem:</strong> Breathing exercise audio or SOS voice guidance not playing.</p>
+                    <p><strong>Solutions:</strong></p>
+                    <ol>
+                      <li>Check device volume (not on silent)</li>
+                      <li>Check ringer/silent switch on side of device</li>
+                      <li>Restart the app</li>
+                      <li>Check Settings → Audio to verify audio is enabled</li>
+                      <li>Restart your device</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Emergency Contacts -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contactsIssue">
+                    Emergency Contacts Not Working
+                  </button>
+                </h3>
+                <div id="contactsIssue" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Problem:</strong> Cannot add or call emergency contacts.</p>
+                    <p><strong>Solutions:</strong></p>
+                    <ol>
+                      <li>Grant Contacts permission: Settings → Cathexis → Contacts → Allow</li>
+                      <li>Ensure you've added contacts in Settings → Emergency Contacts</li>
+                      <li>Verify contact has valid phone number</li>
+                      <li>Try removing and re-adding the contact</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <!-- App Crashes -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#crashIssue">
+                    App Crashes or Freezes
+                  </button>
+                </h3>
+                <div id="crashIssue" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Problem:</strong> App becomes unresponsive or crashes.</p>
+                    <p><strong>Solutions:</strong></p>
+                    <ol>
+                      <li><strong>Force close</strong> the app: Swipe up from bottom (or double-click home), swipe up on Cathexis</li>
+                      <li><strong>Restart</strong> your device</li>
+                      <li><strong>Check for updates:</strong> App Store → Updates</li>
+                      <li><strong>Reinstall</strong> the app (your data will be preserved in iOS backup)</li>
+                      <li>Contact support if issue persists</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Data Not Saving -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dataIssue">
+                    Data Not Saving
+                  </button>
+                </h3>
+                <div id="dataIssue" class="accordion-collapse collapse" data-bs-parent="#troubleshootingAccordion">
+                  <div class="accordion-body">
+                    <p><strong>Problem:</strong> Journal entries or attack logs not saving.</p>
+                    <p><strong>Solutions:</strong></p>
+                    <ol>
+                      <li>Ensure device has available storage: Settings → General → iPhone Storage</li>
+                      <li>Check you tapped "Save" button after editing</li>
+                      <li>Verify app has not been force-closed before save completed</li>
+                      <li>Contact support with details</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tips & Best Practices -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-lightbulb-fill me-2"></i>Tips & Best Practices</h2>
+            
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">During a Panic Attack</h5>
+                    <ol>
+                      <li><strong>Open SOS Mode immediately</strong> - Don't wait</li>
+                      <li><strong>Follow the breathing guide</strong> - Even if it feels difficult</li>
+                      <li><strong>Focus on grounding</strong> - Use the 5-4-3-2-1 technique</li>
+                      <li><strong>Read Truth Cards</strong> - Remember: this feeling is temporary</li>
+                      <li><strong>Log the attack afterward</strong> - Help identify patterns</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Building Your Routine</h5>
+                    <ol>
+                      <li><strong>Practice breathing daily</strong> - When calm, so it's familiar during crisis</li>
+                      <li><strong>Personalize Truth Cards</strong> - Add affirmations that resonate with you</li>
+                      <li><strong>Journal regularly</strong> - Track mood even on good days</li>
+                      <li><strong>Review logs monthly</strong> - Identify triggers and progress with your therapist</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Requirements -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-phone-fill me-2"></i>System Requirements</h2>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h5>iOS</h5>
+                <ul>
+                  <li><strong>Minimum:</strong> iOS 12.0 or later</li>
+                  <li><strong>Recommended:</strong> iOS 15.0 or later</li>
+                  <li><strong>Devices:</strong> iPhone, iPad, iPod touch</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Storage</h5>
+                <ul>
+                  <li><strong>Required:</strong> 100 MB</li>
+                  <li><strong>Recommended:</strong> 200 MB for journal entries and logs</li>
+                </ul>
+                <h5 class="mt-3">Connectivity</h5>
+                <ul>
+                  <li><strong>Required:</strong> None! Works 100% offline</li>
+                  <li><strong>Optional:</strong> Internet for cloud sync (future feature)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Resources -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-book-half me-2"></i>Additional Resources</h2>
+            
+            <h4>Learn More About Panic Attacks</h4>
+            <ul>
+              <li><a href="https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms" target="_blank">Understanding Panic Attacks - NIMH</a></li>
+              <li><a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" target="_blank">Anxiety Disorders - WHO</a></li>
+              <li><a href="https://www.mayoclinic.org/diseases-conditions/panic-attacks/symptoms-causes/syc-20376021" target="_blank">Panic Disorder - Mayo Clinic</a></li>
+            </ul>
+
+            <div class="alert alert-warning mt-4" role="alert">
+              <h5>Professional Help</h5>
+              <p><strong>Remember:</strong> Cathexis is a support tool, not a replacement for professional care.</p>
+              <p>Consider seeking professional help if:</p>
+              <ul class="mb-3">
+                <li>Panic attacks are frequent or worsening</li>
+                <li>Attacks interfere with daily life</li>
+                <li>You avoid situations due to fear of attacks</li>
+                <li>You feel depressed or hopeless</li>
+                <li>You're using alcohol/drugs to cope</li>
+              </ul>
+              <p><strong>Find a Therapist:</strong></p>
+              <ul class="mb-0">
+                <li><a href="https://www.psychologytoday.com/us/therapists" target="_blank">Psychology Today Therapist Finder</a></li>
+                <li><a href="https://www.betterhelp.com" target="_blank">BetterHelp Online Therapy</a></li>
+                <li><a href="https://findtreatment.samhsa.gov" target="_blank">SAMHSA Treatment Locator</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Cathexis -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="mb-4"><i class="bi bi-heart-fill me-2"></i>About Cathexis</h2>
+            <p>Cathexis is developed with care by mental health advocates who understand the challenges of panic and anxiety. Our mission is to provide immediate, accessible, and private support when you need it most.</p>
+            <ul class="list-unstyled">
+              <li><strong>App Name:</strong> Cathexis</li>
+              <li><strong>Version:</strong> 1.0.0</li>
+              <li><strong>Category:</strong> Health & Fitness</li>
+              <li><strong>Developer:</strong> Ketra Labs</li>
+              <li><strong>Contact:</strong> <a href="mailto:support@ketralabs.com">support@ketralabs.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Still Need Help -->
+        <div class="row mt-5 mb-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto">
+            <div class="card bg-primary text-white">
+              <div class="card-body text-center p-5">
+                <h3><i class="bi bi-envelope-heart-fill me-2"></i>Still Need Help?</h3>
+                <p class="lead">We're here for you. Email us at <a href="mailto:support@ketralabs.com" class="text-white text-decoration-underline"><strong>support@ketralabs.com</strong></a></p>
+                <p class="mb-0"><small>Include: Your question or issue, Device and iOS version, App version (Settings → About), Screenshots if helpful</small></p>
+                <p class="mt-3 mb-0"><small><em>Response time: Typically within 24-48 hours</em></small></p>
+                <hr class="my-4 bg-white">
+                <p class="mb-0"><small>Last Updated: January 8, 2026 • Cathexis v1.0.0</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span><strong class="px-1 sitename">KetraLabs</strong><span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a> -->
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
