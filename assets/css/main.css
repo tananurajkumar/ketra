@@ -861,6 +861,17 @@ section,
   border-radius: 10px;
 }
 
+.gallery .gallery-thumb-link {
+  display: block;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.gallery .gallery-thumb-link:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
 .gallery .gallery-item img {
   transition: 0.3s;
 }
@@ -874,8 +885,16 @@ section,
   z-index: 3;
 }
 
+.gallery .gallery-overlay-link {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
 .gallery .gallery-links .preview-link,
 .gallery .gallery-links .details-link {
+  position: relative;
+  z-index: 1;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
   transition: 0.3s;

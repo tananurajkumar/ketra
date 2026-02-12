@@ -9,14 +9,18 @@
   <meta name="keywords" content="app portfolio, text editor app, calendar app, quiz maker, utility apps, Mac apps, iOS apps, Android apps, developer portfolio">
   <meta name="author" content="Anuraj Kumar">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#27a776">
   <link rel="canonical" href="https://ketralabs.com/projects.html">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ketralabs.com/projects.html">
+  <meta property="og:site_name" content="KetraLabs">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="App Portfolio - KetraLabs Utilities">
   <meta property="og:description" content="Explore our utility apps including text editor, calendar app, and quiz maker for multiple platforms.">
   <meta property="og:image" content="https://ketralabs.com/assets/img/gallery/gallery-1.jpg">
+  <meta property="og:image:alt" content="KetraLabs app portfolio - Cathexis and utility apps">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
@@ -25,6 +29,9 @@
   <meta property="twitter:description" content="Explore our utility apps including text editor, calendar app, and quiz maker for multiple platforms.">
   <meta property="twitter:image" content="https://ketralabs.com/assets/img/gallery/gallery-1.jpg">
   <meta property="twitter:creator" content="@tananurajkumar">
+
+  <!-- Smart App Banner (iOS): one-tap to App Store from Safari -->
+  <meta name="apple-itunes-app" content="app-id=6757520014">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -44,6 +51,27 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Structured Data: CollectionPage / ItemList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "KetraLabs Project Portfolio",
+    "description": "Text editor, calendar app, quiz maker, and Cathexis panic attack companion. Utility apps for Mac, iOS, and Android.",
+    "url": "https://ketralabs.com/projects.html",
+    "publisher": { "@type": "Organization", "name": "KetraLabs", "url": "https://ketralabs.com" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Cathexis", "url": "https://ketralabs.com/cathexis/" },
+        { "@type": "ListItem", "position": 2, "name": "Minimalist Calendar", "url": "https://ketralabs.com/project-details.html" },
+        { "@type": "ListItem", "position": 3, "name": "Quiz Maker Utility", "url": "https://ketralabs.com/projects.html" },
+        { "@type": "ListItem", "position": 4, "name": "Mobile Text Editor", "url": "https://ketralabs.com/project-details.html" }
+      ]
+    }
+  }
+  </script>
 
   <!-- =======================================================
   * Template Name: KetraLabs
@@ -68,8 +96,9 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home<br></a></li>
-          <li><a href="projects.html"><span>Projects<br></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog/">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

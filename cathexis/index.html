@@ -5,26 +5,33 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Cathexis - Your Private Panic Attack Companion | KetraLabs</title>
-  <meta name="description" content="Cathexis is a mental health app for panic attacks and acute anxiety. Science-based breathing exercises, grounding techniques, and crisis support—all offline and private.">
-  <meta name="keywords" content="panic attack app, anxiety app, mental health, breathing exercises, grounding techniques, CBT, offline mental health, iOS app">
+  <meta name="description" content="Cathexis is a mental health app for panic attacks and acute anxiety. Panic-first design: grounding, breathing, truth cards, and SOS mode. Core features work offline, data stays on your device. Free with optional Premium.">
+  <meta name="keywords" content="panic attack app, anxiety app, mental health, breathing exercises, grounding techniques, CBT, offline mental health, iOS app, Android app">
   <meta name="author" content="Anuraj Kumar">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#27a776">
   <link rel="canonical" href="https://ketralabs.com/cathexis/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ketralabs.com/cathexis/">
+  <meta property="og:site_name" content="KetraLabs">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Cathexis - Your Private Panic Attack Companion">
-  <meta property="og:description" content="Science-based panic attack support with breathing exercises, grounding techniques, and crisis tools. Works offline. Privacy-first.">
+  <meta property="og:description" content="Mental health app for panic attacks and anxiety. Panic-first design: SOS, breathing, grounding, truth cards. Works offline. Free with optional Cathexis Pro.">
   <meta property="og:image" content="https://ketralabs.com/assets/img/cathexis/image1.jpg">
+  <meta property="og:image:alt" content="Cathexis app - Truth Cards and panic attack support">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ketralabs.com/cathexis/">
   <meta property="twitter:title" content="Cathexis - Your Private Panic Attack Companion">
-  <meta property="twitter:description" content="Science-based panic attack support with breathing exercises, grounding techniques, and crisis tools. Works offline. Privacy-first.">
+  <meta property="twitter:description" content="Mental health app for panic attacks and anxiety. Panic-first design: SOS, breathing, grounding, truth cards. Works offline. Free with optional Cathexis Pro.">
   <meta property="twitter:image" content="https://ketralabs.com/assets/img/cathexis/image1.jpg">
   <meta property="twitter:creator" content="@tananurajkumar">
+
+  <!-- Smart App Banner (iOS): one-tap to App Store from Safari -->
+  <meta name="apple-itunes-app" content="app-id=6757520014">
 
   <!-- Favicons -->
   <link href="../assets/img/favicon.png" rel="icon">
@@ -44,6 +51,33 @@
 
   <!-- Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- Structured Data: SoftwareApplication + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cathexis",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "Mental health app for panic attacks and acute anxiety. Panic-first design with SOS mode, breathing exercises, grounding techniques, truth cards. Works 100% offline. Free with optional Cathexis Pro.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Organization", "name": "KetraLabs", "url": "https://ketralabs.com" },
+    "url": "https://ketralabs.com/cathexis/",
+    "downloadUrl": "https://apps.apple.com/us/app/cathexis-panic-assist/id6757520014",
+    "featureList": ["SOS Mode", "Breathing exercises", "5-4-3-2-1 Grounding", "Truth Cards", "Journal", "Offline-first", "Privacy-focused"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ketralabs.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Cathexis", "item": "https://ketralabs.com/cathexis/" }
+    ]
+  }
+  </script>
 
   <!-- Custom Cathexis Page Styles -->
   <style>
@@ -90,6 +124,36 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(39, 167, 118, 0.4);
       color: #ffffff;
+    }
+
+    .cathexis-page .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .cathexis-page .cta-buttons-secondary {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .cathexis-page .nav-download {
+      background: linear-gradient(135deg, var(--accent-color), #20c997);
+      color: #ffffff !important;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .cathexis-page .nav-download:hover {
+      color: #ffffff !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(39, 167, 118, 0.4);
     }
 
     .cathexis-page .breadcrumbs {
@@ -250,11 +314,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="../index.html">Home<br></a></li>
-          <li><a href="../projects.html"><span>Projects<br></a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="index.html" class="active">Cathexis App</a></li>
+          <li><a href="../blog/">Blog</a></li>
           <li><a href="support.html">Support</a></li>
           <li><a href="../contact.html">Contact</a></li>
+          <!-- <li><a href="https://apps.apple.com/us/app/cathexis-panic-assist/id6757520014" class="nav-download" target="_blank" rel="noopener"><i class="bi bi-apple me-1"></i>Download</a></li> -->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -271,9 +336,14 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-10">
               <h1>Cathexis</h1>
-              <p class="tagline">Your private companion for managing panic attacks with science-based techniques—built for moments when you need immediate support.</p>
-              <a href="support.html" class="cta-btn">Get Support</a>
-              <a href="privacypolicy.html" class="cta-btn ms-2">Privacy Policy</a>
+              <p class="tagline">Your private companion for managing panic attacks with science-based techniques—built for when you need immediate support.</p>
+              <div class="cta-buttons">
+                <a href="https://apps.apple.com/us/app/cathexis-panic-assist/id6757520014" class="cta-btn" target="_blank" rel="noopener">Download from App Store</a>
+                <div class="cta-buttons-secondary">
+                  <a href="support.html" class="cta-btn">Get Support</a>
+                  <!-- <a href="privacypolicy.html" class="cta-btn">Privacy Policy</a> -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -344,20 +414,20 @@
             <div class="portfolio-description">
               <h2>Your Private Panic Attack Companion</h2>
               <p>
-                Cathexis is a mental health app designed specifically for people experiencing panic attacks and acute anxiety. With a <strong>"panic-first"</strong> design philosophy, the app provides instant access to proven grounding techniques, breathing exercises, and reassurance tools that help you regain control during overwhelming moments.
+                Cathexis is a mental health app designed specifically for people experiencing panic attacks and acute anxiety. With a <strong>panic-first</strong> design philosophy, the app provides instant access to proven grounding techniques, breathing exercises, truth cards, and SOS mode—tools that help you regain control during overwhelming moments.
               </p>
               <p>
-                Unlike generic wellness apps, Cathexis is built for crisis moments—when you need immediate, effective support. Every feature is accessible with minimal taps, works completely offline, and prioritizes your privacy above all else.
+                Unlike generic wellness apps, Cathexis is built for crisis moments—when you need immediate, effective support. Every feature is accessible with minimal taps, works completely offline, and prioritizes your privacy above all else. Core features are free; an optional Premium tier (Cathexis Pro) adds custom themes, alternate app icons, and extra customization.
               </p>
 
               <!-- Core Features -->
               <div class="feature-card" data-aos="fade-up">
-                <h3><i class="bi bi-heart-pulse-fill me-2"></i>Instant SOS Mode</h3>
-                <p>One tap activates a guided recovery sequence with breathing exercises, haptic feedback, and grounding techniques. Quick access to emergency contacts when you need support most.</p>
+                <h3><i class="bi bi-heart-pulse-fill me-2"></i>SOS Mode</h3>
+                <p>One tap starts a guided sequence: breathing, haptics, calming messages, and optional voice-over. Check-ins and quick access to emergency contacts when you need more help.</p>
               </div>
 
               <div class="feature-card" data-aos="fade-up">
-                <h3><i class="bi bi-lungs-fill me-2"></i>Breathing Exercises</h3>
+                <h3><i class="bi bi-lungs-fill me-2"></i>Breathe</h3>
                 <p>Multiple proven patterns including:</p>
                 <ul>
                   <li><strong>Box Breathing</strong> (4-4-4-4)</li>
@@ -365,15 +435,11 @@
                   <li><strong>3-2-3 Method</strong></li>
                   <li><strong>Customizable cycles</strong> to match your needs</li>
                 </ul>
+                <p class="mb-0">Configurable from the home screen.</p>
               </div>
 
               <div class="feature-card" data-aos="fade-up">
-                <h3><i class="bi bi-hand-index-thumb me-2"></i>5-4-3-2-1 Grounding Technique</h3>
-                <p>Interactive sensory awareness exercise that reconnects you with the present moment by identifying things you <strong>see, touch, hear, smell, and taste</strong>.</p>
-              </div>
-
-              <div class="feature-card" data-aos="fade-up">
-                <h3><i class="bi bi-card-text me-2"></i>Truth Cards & Affirmations</h3>
+                <h3><i class="bi bi-card-text me-2"></i>Truth Cards &amp; Affirmations</h3>
                 <ul>
                   <li>15+ pre-written reassurance cards</li>
                   <li>Create custom cards with personal affirmations</li>
@@ -383,7 +449,19 @@
               </div>
 
               <div class="feature-card" data-aos="fade-up">
-                <h3><i class="bi bi-clipboard-data me-2"></i>Private Attack Logging</h3>
+                <h3><i class="bi bi-hand-index-thumb me-2"></i>5-4-3-2-1 Grounding Technique</h3>
+                <p>Interactive sensory awareness exercise in a dedicated hub that reconnects you with the present moment by identifying things you <strong>see, touch, hear, smell, and taste</strong>.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-moon-stars-fill me-2"></i>Sleep</h3>
+                <ul>
+                  <li><strong>Sleep Sounds:</strong> High-quality nature soundscapes with sleep timers</li>
+                </ul>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-journal-text me-2"></i>Journal (Private Attack Logging)</h3>
                 <p>Track patterns and triggers with detailed logs including:</p>
                 <ul>
                   <li>Intensity levels (1-10 scale)</li>
@@ -396,11 +474,20 @@
               </div>
 
               <div class="feature-card" data-aos="fade-up">
-                <h3><i class="bi bi-music-note-beamed me-2"></i>Rest & Distraction Tools</h3>
+                <h3><i class="bi bi-controller me-2"></i>Play – Rest &amp; Distraction</h3>
                 <ul>
-                  <li><strong>Sleep Sounds:</strong> High-quality nature soundscapes with sleep timers</li>
                   <li><strong>Bubble Pop Game:</strong> Infinite, stress-free distraction to calm your mind</li>
                 </ul>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-lightbulb-fill me-2"></i>Learn</h3>
+                <p>Understanding panic and anxiety through psychoeducation—so you can build lasting skills.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up">
+                <h3><i class="bi bi-star-fill me-2"></i>Premium (Cathexis Pro)</h3>
+                <p>Optional subscription: custom themes, alternate app icons, and extra customization. The free tier includes all core features.</p>
               </div>
 
               <div class="feature-card" data-aos="fade-up">
@@ -421,27 +508,25 @@
                 </p>
               </div>
 
-              <h2 class="mt-5">Privacy & Security</h2>
-              <p><strong>Privacy-First Design</strong></p>
+              <h2 class="mt-5">Why Cathexis</h2>
+              <p><strong>Trust &amp; value</strong></p>
               <ul>
-                <li>✅ All journal entries and panic logs stored locally with encryption</li>
-                <li>✅ Optional analytics and crash reporting (disabled by default)</li>
-                <li>✅ No advertisements, ever</li>
-                <li>✅ Optional sign-in for future features</li>
-                <li>✅ Core features work 100% offline</li>
+                <li>✅ <strong>Panic-first design</strong> — Built for crisis moments; minimal taps, works offline</li>
+                <li>✅ <strong>100% offline core</strong> — SOS, breathing, grounding, truth cards, and journal work without internet</li>
+                <li>✅ <strong>Privacy-first</strong> — Journal and panic logs stored locally with encryption; no selling of data</li>
+                <li>✅ <strong>No ads</strong> — Ad-free experience</li>
+                <li>✅ <strong>Optional analytics &amp; crash reporting</strong> — Off by default; opt-in only</li>
+                <li>✅ <strong>Optional sign-in</strong> — Google/Apple for future sync; not required for core use</li>
+                <li>✅ <strong>Optional Premium</strong> — Extra customization via Cathexis Pro; core features stay free</li>
               </ul>
-
-              <p class="mt-4">
-                Essential tools like breathing exercises, grounding techniques, and SOS mode function without internet connection—perfect for airplanes, subways, or remote areas.
-              </p>
 
               <h2 class="mt-5">Who Is Cathexis For?</h2>
               <ul>
                 <li>✅ People experiencing panic attacks or acute anxiety</li>
-                <li>✅ Those seeking immediate grounding techniques</li>
-                <li>✅ Anyone building preventive anxiety management skills</li>
-                <li>✅ Individuals who value privacy and local data storage</li>
-                <li>✅ Users who need tools that work offline</li>
+                <li>✅ Anyone who wants immediate grounding and breathing tools</li>
+                <li>✅ People building preventive anxiety habits</li>
+                <li>✅ Users who care about privacy and local data</li>
+                <li>✅ Anyone who needs tools that work offline (travel, low connectivity)</li>
               </ul>
 
               <div class="alert alert-warning mt-4" role="alert">
@@ -457,11 +542,11 @@
               <h3>App Information</h3>
               <ul>
                 <li><strong>Category:</strong> Health & Fitness</li>
-                <li><strong>Version:</strong> 1.0.0</li>
-                <li><strong>Platform:</strong> iOS (iPhone & iPad)</li>
+                <li><strong>Version:</strong> 1.0.16</li>
+                <li><strong>Platform:</strong> iOS (iPhone & iPad), Android</li>
                 <li><strong>Developer:</strong> Ketra Labs</li>
-                <li><strong>Price:</strong> Free</li>
-                <li><strong>Requires:</strong> iOS 12.0 or later</li>
+                <li><strong>Price:</strong> Free; optional Premium (Cathexis Pro)</li>
+                <li><strong>Requires:</strong> iOS 17.0 or later; Android 5.0+</li>
                 <li><strong>Size:</strong> ~100 MB</li>
                 <li><strong>Contact:</strong> <a href="mailto:support@ketralabs.com">support@ketralabs.com</a></li>
               </ul>
@@ -471,11 +556,11 @@
             <div class="portfolio-info">
               <h3>Key Differentiators</h3>
               <ul>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Panic-First Design</strong><br>Built for crisis moments</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Offline Capability</strong><br>Works without internet</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Privacy-Focused</strong><br>Local data storage</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>No Ads</strong><br>Distraction-free experience</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Science-Based</strong><br>Uses proven CBT techniques</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Panic-First Design</strong><br>Built for crisis moments; minimal taps</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>100% Offline Core</strong><br>SOS, breathing, grounding, truth cards, journal</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Privacy-Focused</strong><br>Local data, no selling of data</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>No Ads</strong><br>Ad-free experience</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Optional Premium</strong><br>Cathexis Pro for extra customization</li>
               </ul>
             </div>
 
@@ -483,9 +568,10 @@
             <div class="portfolio-info">
               <h3>Download & Links</h3>
               <ul>
-                <li><a href="#" class="btn-visit"><i class="bi bi-apple me-2"></i>iOS App Store</a></li>
+                <li><a href="https://apps.apple.com/us/app/cathexis-panic-assist/id6757520014" class="btn-visit" target="_blank" rel="noopener"><i class="bi bi-apple me-2"></i>iOS App Store</a></li>
                 <li><a href="support.html" class="btn-visit"><i class="bi bi-question-circle me-2"></i>Get Support</a></li>
                 <li><a href="privacypolicy.html" class="btn-visit"><i class="bi bi-shield-lock me-2"></i>Privacy Policy</a></li>
+                <li><a href="terms.html" class="btn-visit"><i class="bi bi-file-text me-2"></i>Terms &amp; Conditions</a></li>
                 <li><a href="../projects.html" class="btn-visit"><i class="bi bi-grid me-2"></i>All Projects</a></li>
               </ul>
             </div>
