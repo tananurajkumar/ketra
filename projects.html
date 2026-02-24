@@ -52,6 +52,17 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ketralabs.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://ketralabs.com/projects.html" }
+    ]
+  }
+  </script>
   <!-- Structured Data: CollectionPage / ItemList -->
   <script type="application/ld+json">
   {
@@ -132,8 +143,11 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="Cathexis - Panic Attack Companion App for iOS">
+              <a href="cathexis/" class="gallery-thumb-link" aria-label="Open Cathexis - Panic Attack Companion">
+                <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="Cathexis - Panic Attack Companion App for iOS" loading="lazy" decoding="async">
+              </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="cathexis/" class="gallery-overlay-link" aria-label="Open project"></a>
                 <a href="assets/img/gallery/gallery-1.jpg" title="Cathexis - Your Personal Panic Attack Companion" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="cathexis/" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -151,8 +165,11 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="Minimalist Calendar App - Clean design with powerful features">
+              <a href="project-details.html" class="gallery-thumb-link" aria-label="Open Minimalist Calendar">
+                <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="Minimalist Calendar App - Clean design with powerful features" loading="lazy" decoding="async">
+              </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-details.html" class="gallery-overlay-link" aria-label="Open project"></a>
                 <a href="assets/img/gallery/gallery-2.jpg" title="Calendar App - Minimalist & Useful" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -170,8 +187,11 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="Quiz Maker Utility - Upload CSV/XLSX files to create interactive quizzes">
+              <a href="project-details.html" class="gallery-thumb-link" aria-label="Open Quiz Maker Utility">
+                <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="Quiz Maker Utility - Upload CSV/XLSX files to create interactive quizzes" loading="lazy" decoding="async">
+              </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-details.html" class="gallery-overlay-link" aria-label="Open project"></a>
                 <a href="assets/img/gallery/gallery-3.jpg" title="Gallery 3" class="glightbox preview-link"><i
                   class="bi bi-arrows-angle-expand"></i></a>
               <a href="assets/downloads/quiz-app-production.zip" download class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -191,8 +211,11 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="Text Editor Mobile Interface - Optimized for touch devices">
+              <a href="project-details.html" class="gallery-thumb-link" aria-label="Open Mobile Text Editor">
+                <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="Text Editor Mobile Interface - Optimized for touch devices" loading="lazy" decoding="async">
+              </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-details.html" class="gallery-overlay-link" aria-label="Open project"></a>
                 <a href="assets/img/gallery/gallery-4.jpg" title="Text Editor Mobile UI" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -210,8 +233,11 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt="Calendar App Dark Mode - Beautiful dark theme for night usage">
+              <a href="project-details.html" class="gallery-thumb-link" aria-label="Open Calendar Dark Mode">
+                <img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt="Calendar App Dark Mode - Beautiful dark theme for night usage" loading="lazy" decoding="async">
+              </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-details.html" class="gallery-overlay-link" aria-label="Open project"></a>
                 <a href="assets/img/gallery/gallery-5.jpg" title="Calendar Dark Mode" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -229,8 +255,11 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt="Quiz Results Dashboard - Detailed analytics and progress tracking">
+              <a href="project-details.html" class="gallery-thumb-link" aria-label="Open Quiz Analytics">
+                <img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt="Quiz Results Dashboard - Detailed analytics and progress tracking" loading="lazy" decoding="async">
+              </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-details.html" class="gallery-overlay-link" aria-label="Open project"></a>
                 <a href="assets/img/gallery/gallery-6.jpg" title="Quiz Analytics Dashboard" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -248,8 +277,11 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt="Cross-Platform Development - Unified codebase for Mac, iOS, and Android">
+              <a href="project-details.html" class="gallery-thumb-link" aria-label="Open Cross-Platform Code">
+                <img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt="Cross-Platform Development - Unified codebase for Mac, iOS, and Android" loading="lazy" decoding="async">
+              </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-details.html" class="gallery-overlay-link" aria-label="Open project"></a>
                 <a href="assets/img/gallery/gallery-7.jpg" title="Cross-Platform Architecture" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -267,8 +299,11 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-8-2.jpg" class="img-fluid" alt="Development Process - From concept to deployment across platforms">
+              <a href="project-details.html" class="gallery-thumb-link" aria-label="Open Development Process">
+                <img src="assets/img/gallery/gallery-8-2.jpg" class="img-fluid" alt="Development Process - From concept to deployment across platforms" loading="lazy" decoding="async">
+              </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="project-details.html" class="gallery-overlay-link" aria-label="Open project"></a>
                 <a href="assets/img/gallery/gallery-8-2.jpg" title="Development Workflow" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="project-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>

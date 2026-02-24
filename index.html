@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>KetraLabs - Developer Tools & Utilities | Text Editor, Calendar & Quiz Apps</title>
-  <meta name="description" content="KetraLabs creates small, useful utilities including a fast text editor for Mac/iOS/Android, minimalist calendar app, and self-exam quiz maker. Built by a passionate developer.">
-  <meta name="keywords" content="developer utilities, text editor app, calendar app, quiz maker, Mac text editor, iOS utilities, Android apps, developer tools, minimalist apps, utility software">
+  <meta name="description" content="KetraLabs creates small, useful utilities: text editor, calendar app, quiz maker, and Cathexis—your panic attack companion. Built by a passionate developer.">
+  <meta name="keywords" content="developer utilities, text editor app, calendar app, quiz maker, Cathexis, panic attack app, Mac text editor, iOS utilities, Android apps, developer tools, minimalist apps, utility software">
   <meta name="author" content="Anuraj Kumar">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ketralabs.com/">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="KetraLabs">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="KetraLabs - Developer Tools & Utilities">
-  <meta property="og:description" content="Creating small, useful utilities including text editor, calendar app, and quiz maker for Mac, iOS, and Android.">
+  <meta property="og:description" content="Small, useful utilities: text editor, calendar app, quiz maker, and Cathexis panic companion for Mac, iOS, and Android.">
   <meta property="og:image" content="https://ketralabs.com/assets/img/logo.png">
   <meta property="og:image:alt" content="KetraLabs - Developer Tools and Utilities">
   
@@ -26,7 +26,7 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ketralabs.com/">
   <meta property="twitter:title" content="KetraLabs - Developer Tools & Utilities">
-  <meta property="twitter:description" content="Creating small, useful utilities including text editor, calendar app, and quiz maker for Mac, iOS, and Android.">
+  <meta property="twitter:description" content="Small, useful utilities: text editor, calendar app, quiz maker, and Cathexis panic companion for Mac, iOS, and Android.">
   <meta property="twitter:image" content="https://ketralabs.com/assets/img/logo.png">
   <meta property="twitter:creator" content="@tananurajkumar">
 
@@ -36,6 +36,9 @@
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Preload LCP image (first gallery image) -->
+  <link rel="preload" href="assets/img/gallery/gallery-1.jpg" as="image">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -54,7 +57,18 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   
-  <!-- Structured Data -->
+  <!-- Structured Data: WebSite (for sitelinks / search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KetraLabs",
+    "url": "https://ketralabs.com",
+    "description": "Developer tools and utilities: text editor, calendar app, quiz maker, and Cathexis panic attack companion.",
+    "publisher": { "@type": "Organization", "name": "KetraLabs", "url": "https://ketralabs.com", "logo": "https://ketralabs.com/assets/img/logo.png" }
+  }
+  </script>
+  <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,7 +76,7 @@
     "name": "KetraLabs",
     "url": "https://ketralabs.com",
     "logo": "https://ketralabs.com/assets/img/logo.png",
-    "description": "Developer creating small and useful utilities including text editor, calendar app, and quiz maker",
+    "description": "Developer creating small and useful utilities including text editor, calendar app, quiz maker, and Cathexis mental health app.",
     "email": "support@ketralabs.com",
     "sameAs": [
       "https://x.com/tananurajkumar"
@@ -73,6 +87,16 @@
       "sameAs": "https://x.com/tananurajkumar"
     },
     "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "Cathexis",
+          "description": "Panic attack companion app with grounding, breathing, and SOS. iOS and Android.",
+          "operatingSystem": ["iOS", "Android"],
+          "url": "https://ketralabs.com/cathexis/"
+        }
+      },
       {
         "@type": "Offer",
         "itemOffered": {
@@ -118,9 +142,11 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cathexis/">Cathexis App</a></li>
           <li><a href="blog/">Blog</a></li>
+          <li><a href="cathexis/support.html">Support</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <!-- <li><a href="https://apps.apple.com/us/app/cathexis-panic-assist/id6757520014" class="nav-download" target="_blank" rel="noopener"><i class="bi bi-apple me-1"></i>Download</a></li> -->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -137,6 +163,7 @@
             <h2><span>I'm </span><span class="underlight">Anuraj Kumar</span></br><span>I love building small things
                 that make a big impact</span></h2>
             <p>Check out my work below</p>
+            <p class="mt-2"><a href="projects.html" class="btn btn-outline-light btn-sm">View full portfolio</a></p>
           </div>
         </div>
       </div>
@@ -153,7 +180,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
               <a href="cathexis/" class="gallery-thumb-link" aria-label="Open Cathexis - Panic Attack Companion">
-                <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="Cathexis - Panic Attack Companion App">
+                <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="Cathexis - Panic Attack Companion App" loading="lazy" decoding="async">
               </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="cathexis/" class="gallery-overlay-link" aria-label="Open project"></a>
@@ -167,7 +194,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
               <a href="gallery-single.html" class="gallery-thumb-link" aria-label="Open project">
-                <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="KetraLabs project showcase - minimalist calendar or utility app">
+                <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="KetraLabs project showcase - minimalist calendar or utility app" loading="lazy" decoding="async">
               </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="gallery-single.html" class="gallery-overlay-link" aria-label="Open project"></a>
@@ -181,7 +208,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
               <a href="gallery-single.html" class="gallery-thumb-link" aria-label="Open project">
-                <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="Quiz Maker utility - CSV and XLSX to self-exam quizzes">
+                <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="Quiz Maker utility - CSV and XLSX to self-exam quizzes" loading="lazy" decoding="async">
               </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="gallery-single.html" class="gallery-overlay-link" aria-label="Open project"></a>
@@ -196,7 +223,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
               <a href="gallery-single.html" class="gallery-thumb-link" aria-label="Open project">
-                <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="Text editor or mobile app interface - KetraLabs utilities">
+                <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="Text editor or mobile app interface - KetraLabs utilities" loading="lazy" decoding="async">
               </a>
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="gallery-single.html" class="gallery-overlay-link" aria-label="Open project"></a>
@@ -221,8 +248,8 @@
         <p>© <span>Copyright</span><strong class="px-1 sitename">KetraLabs</strong><span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/tananurajkumar" target="_blank" rel="noopener noreferrer" aria-label="KetraLabs on X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+        <a href="mailto:support@ketralabs.com" aria-label="Email KetraLabs"><i class="bi bi-envelope"></i></a>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
